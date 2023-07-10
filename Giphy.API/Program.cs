@@ -15,6 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IGiphyGifService, GiphyGifService>();
 builder.Services.AddScoped<IGiphyGifService, GiphyGifService>();
 builder.Services.AddScoped<IWebApiCaller, WebApiCaller>();
+builder.Services.AddMemoryCache();
 
 builder.Services.AddCors(opt =>
             opt.AddPolicy("CorsPolicy", policy =>
